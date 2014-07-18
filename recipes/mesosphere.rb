@@ -14,7 +14,7 @@ Chef::Resource::Service.send(:include, Helpers::Mesos)
 # package until a trusty mesos deb is available
 # from the mesosphere site.
 if platform?("ubuntu") && node['platform_version'] == '14.04'
-  platform_version = '13.10'
+  platform_version = '14.04'
 else
   platform_version = node['platform_version']
 end
