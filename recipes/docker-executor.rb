@@ -16,7 +16,7 @@ if version == "0.19.0" then
 end
 
 if version >= "0.18.2"
-  egg_name = "mesos-#{version}-py2.7-linux-x86_64"
+  egg_name = "mesos-0.19.1-py2.7-linux-x86_64"
 else
   egg_name = "mesos_#{version}-amd64"
 end
@@ -29,7 +29,7 @@ package "python-setuptools" do
 end
 
 remote_file "#{Chef::Config[:file_cache_path]}/#{egg_name}.egg" do
-  source "http://downloads.mesosphere.io/master/ubuntu/#{platform_version}/#{egg_name}.egg"
+  source "http://downloads.mesosphere.io/master/ubuntu/14.04/mesos-0.19.1-py2.7-linux-x86_64.egg"
   mode   "0755"
   not_if { File.exists?("#{Chef::Config[:file_cache_path]}/#{egg_name}.egg")==true }
   notifies :run,  "execute[install-mesos-python-binding]"

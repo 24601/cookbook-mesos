@@ -73,7 +73,7 @@ module Helpers
       if mesos_version < "0.19.0" then
         "#{mesosphere_io_prefix}/mesos_#{mesos_version}_amd64.deb"
       else
-        "#{mesosphere_io_prefix}/mesos_#{mesos_version}~#{platform}#{platform_version}%2B1_amd64.deb"
+        "http://downloads.mesosphere.io/master/ubuntu/14.04/mesos_0.19.1-0.1.20140714211259.rc1.ubuntu1404_amd64.deb"
       end
     end
 
